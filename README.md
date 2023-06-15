@@ -1,32 +1,97 @@
-# whatshapp-auto-message-bot
-Whatsapp Auto Message Bot is an automated messaging on WhatsApp. With features like bulk messages, it simplifies communication and saves time.
+<h1>WhatsApp Automation Scripts</h1>
 
-WhatsApp Bot for Sending Bulk Automated Messages using Excel Data
+<p>These scripts automate the process of sending messages and images to multiple WhatsApp numbers using Selenium and Python.</p>
 
-This project is a WhatsApp bot designed to send bulk automated messages to contacts using data extracted from an Excel file. It utilizes the WhatsApp API and Python programming language to automate the process of sending messages.
+<h2>Requirements</h2>
 
-Prerequisites
-Python 3.6 or higher
-Selenium library
-ChromeDriver
-Setup
-Clone this repository to your local machine.
+<ul>
+  <li>Python 3.x</li>
+  <li>Selenium library</li>
+  <li>pandas library</li>
+  <li>pyautogui library</li>
+  <li>Chrome web browser</li>
+  <li>Chromedriver</li>
+</ul>
 
-Install the required Python packages using the following command:
-pip install selenium
+<h2>Installation</h2>
 
-Download the appropriate ChromeDriver version for your Chrome browser from the official ChromeDriver website (https://sites.google.com/a/chromium.org/chromedriver/downloads). Make sure to place the ChromeDriver executable in the same directory as the bot script.
+<ol>
+  <li>Clone the repository or download the files to your local machine.</li>
+  <li>Install the required Python libraries using pip:</li>
+</ol>
 
-Prepare your Excel data file with the phone numbers and corresponding messages. The file should be in .xlsx format, with the phone numbers in one column and the messages in another.
+<pre><code>pip install selenium pandas pyautogui
+</code></pre>
 
-Update the config.py file with your WhatsApp account credentials and the path to your Excel data file.
+<ol start="3">
+  <li>Download the appropriate Chromedriver version for your Chrome browser from <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">here</a>. Make sure to place the Chromedriver executable in the same directory as the scripts.</li>
+</ol>
 
-Run the bot script using the following command:
-python whatsapp_bot.py
+<h2>Usage</h2>
 
-The bot will launch a Chrome browser and prompt you to scan the QR code with your WhatsApp account. Once authenticated, it will start sending automated messages to the contacts listed in the Excel file.
+<h3>AutomatedMessageApp.py</h3>
 
-Sit back and let the bot do the work! It will automatically send messages one by one to the specified contacts.
+<ol>
+  <li>Create an Excel file named <code>yourexcelfiles.xlsx</code> with a column named "numara" containing the phone numbers you want to send messages to.</li>
+  <li>Open <code>message.txt</code> and provide the message content in the following format:</li>
+</ol>
 
-Important Note
-Please ensure that you use this bot responsibly and in compliance with WhatsApp's terms of service. Misuse or spamming can lead to your account being banned by WhatsApp.
+<pre><code>message=Your message content here.
+image_path=Path/to/your/image.png
+</code></pre>
+
+<p>Replace <code>Your message content here</code> with your actual message and <code>Path/to/your/image.png</code> with the path to the image you want to send (optional).</p>
+
+<ol start="3">
+  <li>Run the script <code>automatedmessageapp.py</code> using the following command:</li>
+</ol>
+
+<pre><code>python automatedmessageapp.py
+</code></pre>
+
+<ol start="4">
+  <li>Follow the instructions in the terminal to open WhatsApp Web and press ENTER to start sending messages.</li>
+  <li>The script will iterate through the phone numbers, send the message, and update the Excel file with the processing status and time.</li>
+</ol>
+
+<h3>NumberCheckApp.py</h3>
+
+<ol>
+  <li>Create an Excel file named <code>yourexcelfiles.xlsx</code> with a column named "numara" containing the phone numbers you want to check on WhatsApp.</li>
+  <li>Run the script <code>numbercheckapp.py</code> using the following command:</li>
+</ol>
+
+<pre><code>python numbercheckapp.py
+</code></pre>
+
+<ol start="3">
+  <li>Follow the instructions in the terminal to open WhatsApp Web and press ENTER to start checking numbers.</li>
+  <li>The script will iterate through the phone numbers, check if they can be used on WhatsApp, and update the Excel file with the processing status and time.</li>
+</ol>
+
+<h3>FragmentedMessageApp.py</h3>
+
+<ol>
+  <li>Create an Excel file named <code>yourexcelfiles.xlsx</code> with a column named "numara" containing the phone numbers you want to send messages to.</li>
+  <li>Modify the message parts (e.g., <code>message_part_1</code>, <code>message_part_2</code>, etc.) and the image path (e.g., <code>image_pathdata</code>) in the script according to your requirements.</li>
+  <li>Run the script <code>fragmentedmessageapp.py</code> using the following command:</li>
+</ol>
+
+<pre><code>python fragmentedmessageapp.py
+</code></pre>
+
+<ol start="4">
+  <li>Follow the instructions in the terminal to open WhatsApp Web and press ENTER to start sending fragmented messages.</li>
+  <li>The script will iterate through the phone numbers, send the fragmented message, and update the Excel file with the processing status and time.</li>
+</ol>
+
+<h2>Notes</h2>
+
+<ul>
+  <li>Make sure to have a stable internet connection while running the scripts.</li>
+  <li>The scripts are provided as examples and may require modifications based on your specific use case.</li>
+</ul>
+
+<p>Feel free to modify and customize the scripts according to your needs. Happy automating!</p>
+
+<p><strong>Note:</strong> Remember to update the README file with any additional instructions or changes specific to your programs.</p>
